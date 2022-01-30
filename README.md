@@ -1,6 +1,7 @@
 ## P&O project 2021
 
 In cooperation with Miguel Quirijnen, Arne Vermeulen, Ewald Verfaillie, Nick Van Dun, William Vanden Daele, Elien Vandermaesen.
+Made in May 2021.
 
 
 ## CHAT FUNCTIONALITIES
