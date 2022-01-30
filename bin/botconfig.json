@@ -1,0 +1,123 @@
+{
+	"elizabot" : {
+		"active" : true,
+		"options" : [
+			{
+				"key" : "elizabot",
+				"options" : {
+					"description" : "start an Eliza chatbot",
+					"type" : "boolean",
+					"default" : false
+				}
+			},
+			{
+				"key" : "elizanick",
+				"options" : {
+					"description" : "the nickname of the Eliza chatbot",
+					"type" : "string",
+					"default" : "Eliza"
+				}
+			},
+			{	
+				"key" : "elizaowner",
+				"options" : {
+					"description" : "the person Eliza responds to",
+					"type" : "string",
+					"default" : null
+				}
+			}
+		],
+		"examples" : [
+			{
+			"command" : "$0 --elizabot [--elizanick=bot_nick] [--elizaowner=owner_nick]", 
+			"description" : "start an Eliza chatbot"
+			}
+		],
+		"checks" : [
+
+		]
+	},
+	"rotationbot" : {
+		"active" : true,
+		"options" : [
+			{
+				"key" : "rotationbot",
+				"options" : {
+					"description" : "start a rotationbot",
+					"type" : "boolean",
+					"default" : false
+				}
+			},
+			{
+				"key" : "rotationnick",
+				"options" : {
+					"description" : "the nickname of the rotationbot",
+					"type" : "string",
+					"default" : "ROT"
+				}
+			},
+			{	
+				"key" : "rotationowner",
+				"options" : {
+					"description" : "the user the rotationbot responds to",
+					"type" : "string",
+					"default" : null
+				}
+			},
+			{	
+				"key" : "rotationnumber",
+				"options" : {
+					"description" : "the number the rotationbot will use",
+					"type" : "string",
+					"default" : 13
+				}
+			}
+		],
+		"examples" : [
+			{
+			"command" : "$0 --rotationbot [--rotationick=bot_nick] [--rotationowner=owner_nick]", 
+			"description" : "Start a rotationbot"
+			}
+		],
+		"checks" : []
+	},
+	"magic8bot" : {
+		"active" : true,
+
+		"options" : [
+			{
+				"key" : "magic8bot",
+				"options" : {
+					"description" : "start a Magic 8 ball chatbot",
+					"type" : "boolean",
+					"default" : false
+				}
+			},
+			{
+				"key" : "magic8botnick",
+				"options" : {
+					"description" : "the nickname of the Magic 8 ball chatbot",
+					"type" : "string",
+					"default" : "Magic8Bot"
+				}
+			},
+			{	
+				"key" : "magic8botowner",
+				"options" : {
+					"description" : "the person the Magic 8 ball responds to",
+					"type" : "string",
+					"default" : null
+				}
+			}
+		],
+		"examples" : [
+			{
+			"command" : "$0 --magic8bot [--magic8botnick=bot_nick] [--magic8botowner=owner_nick]", 
+			"description" : "start a Magic 8 ball chatbot"
+			}
+		],
+		"checks" : [
+
+		]
+	}
+}

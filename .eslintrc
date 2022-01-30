@@ -1,0 +1,67 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // enforces no irregular whitespace
+    "no-irregular-whitespace": [
+      "error",
+      {
+        "skipStrings": true
+      }
+    ],
+    // enforces spacing after comment symbol
+    "spaced-comment": "error",
+    // enforces spacing after semicolons and disallows spacing before semicolons
+    "semi-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    // use of ! is allowed
+    "@typescript-eslint/no-non-null-assertion": "off",
+    // enforces the absence of newlines at the end of non-empty files
+    "eol-last": [
+      "error",
+      "never"
+    ],
+    // enforces no multiple empty lines
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    // enforces the use of single quotes
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": false
+      }
+    ],
+    // allow use of type any
+    "@typescript-eslint/no-explicit-any": "off",
+    // allow useless escape characters
+    "no-useless-escape": "off",
+    // allow functions without return type
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    // allow case declarations
+    "no-case-declarations": "off",
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

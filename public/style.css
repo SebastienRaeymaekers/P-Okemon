@@ -1,0 +1,725 @@
+.html {
+    height: 100%;
+}
+
+.background {
+    overflow: hidden;
+    height: 100%;
+    margin: 0px;
+    justify-content: space-between;
+    background-image: url("images/loginwallpaper.jpeg");
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// LOGINSCREEN//////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.worldSelect {
+    margin: 10px;
+}
+
+.centralLoginDiv {
+    box-shadow: 3px 3px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(70, 130, 180, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.loginBox {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.loginLogo {
+    width: 20%;
+}
+
+.NickBox {
+    text-align: center;
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+.PasswordBox {
+    text-align: center;
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+.loginButton {
+    cursor: pointer;
+    background: rgb(70, 130, 180, 1);
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994ff;
+    border-radius: 3px;
+    color: #d2e2ff;
+}
+
+.loginButton:hover {
+    background: #6b9fff;
+    color: #fff;
+}
+
+/* Style the tab */
+.tab {
+    box-shadow: 2px 2px 10px black;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    background: steelblue;
+    color: #fff;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    font-size: 16px;
+    color: white;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 72vh;
+}
+
+/* login loading animation */
+
+.loader {
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// BODY  ///////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.bodyDiv {
+    display: flex;
+    height: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.gameDiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.canvas {
+    box-shadow: 5px 5px 10px black;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// BUTTONBOX  ///////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.buttonBoxDiv {
+    margin-left: 20px;
+    align-items: center;
+    height: 80%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.material-icons.unavailableButtonBox {
+    font-size: 73px;
+    background: rgb(70, 130, 180, 0.4);
+    color: rgb(255, 255, 255, 0.4);
+    border-radius: 100px;
+    padding: 10px;
+    border-style: dashed;
+    border-color: rgb(255, 255, 255, 0.4);
+}
+
+.material-icons.buttonBox {
+    box-shadow: 5px 5px 10px steelblue;
+    cursor: pointer;
+    font-size: 73px;
+    background: rgb(70, 130, 180);
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    padding: 10px;
+    border-style: dashed;
+    border-color: white;
+}
+
+.material-icons.buttonBox:hover {
+    font-size: 73px;
+    background: rgb(70, 130, 180, 0.4);
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    padding: 10px;
+    border-style: dashed;
+    border-color: white;
+}
+
+/* The Modal (background) */
+.buttonboxMenu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.buttonboxMenuContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 42%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.buttonboxMenuHeader {
+    padding: 2px 16px;
+    background: steelblue;
+    color: white;
+    width: auto;
+}
+
+.spriteSelectorBody {
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+}
+
+.sprite {
+    cursor: pointer;
+    padding: 15px;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+}
+
+.sprite:hover {
+    background: lightblue;
+    border-radius: 5px;
+}
+
+/*<i class="fas fa-play-circle"></i>
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// CHAT  ///////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.chatDiv {
+    width: 25%;
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.chatDivExtraSpace {
+    height: 90px;
+}
+
+.chatDivExtraSpace2 {
+    height: 30px;
+}
+
+.chatTitleDiv {
+    border-radius: 25px;
+    background-color: steelblue;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    color: white;
+}
+
+.chatBox {
+    margin-top: 10px;
+    display: inline list-item;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sendDiv {
+    display: flex;
+    left: 0%;
+    bottom: 0%;
+    display: flex;
+    flex-flow: row;
+}
+
+.textBox {
+    padding-left: 15px;
+    margin-left: 3px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    flex: auto;
+    height: 40px;
+    font-size: 20px;
+}
+
+.sendButton {
+    color: steelblue;
+}
+
+.GPSButton {
+    color: steelblue;
+    width: 100%;
+}
+
+.message {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    position: relative;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// HEADER    ////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.headerDiv {
+    box-shadow: 2px 2px 10px black;
+    justify-content: space-between;
+    display: flex;
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    background: steelblue;
+    height: 60px;
+    color: #fff;
+    top: 0;
+    position: absolute;
+}
+
+.headerNickDiv {
+    position: relative;
+    top: 15px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    font-weight: bold;
+    font-variant: small-caps;
+    width: 50%;
+}
+
+.headerLogo {
+    bottom: 20px;
+    position: relative;
+    width: 150px;
+    height: 100px;
+}
+
+.headerNav {
+    width: 50%;
+    justify-content: flex-end;
+    margin-right: 20px;
+    display: flex;
+}
+
+/* button to disconnect */
+.disconnectButton {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    bottom: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* button to disconnect */
+.disconnectButton:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+/* POPUP CONTAINER CONNECTIONS */
+.popup {
+    margin-left: -30px;
+    margin-right: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.popupText {
+    margin-left: 10px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    padding: 10px;
+    position: relative;
+    top: 12px;
+    visibility: hidden;
+    width: 175px;
+    background-color: rgb(255, 255, 255, 0.9);
+    color: rgb(70, 130, 180, 1);
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    border-style: outset;
+}
+
+.popupTitle {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.popupTitle:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.popupValueText {
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: steelblue;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+}
+
+/* The Modal (background) */
+.modal-create-channel {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-create-channel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 42%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: rgb(17, 31, 43);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Close Button */
+.close2 {
+    color: steelblue;
+    /* float: inline-end; */
+    position: absolute;
+    right: 16px;
+    top: auto;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header-create-channel {
+    padding: 2px 16px;
+    background: steelblue;
+    color: white;
+    width: auto;
+}
+
+.modal-body-create-channel {
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.channel-name-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.GPSbuttons {
+    display: flex;
+    flex-direction: row;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// MINIGAME  ////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.mgDiv {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.mgContentDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.mgHeaderDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2px 16px;
+    background: steelblue;
+    color: white;
+    width: auto;
+}
+
+.mgBodyDiv {
+    background-color: black;
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.scoreDisplay {
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color: white;
+}
+.mgButtonsDiv {
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    justify-items: center;
+    display: flex;
+    align-content: center;
+    width: 61px;
+}
+
+.scoreboardDiv {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 80px;
+}
+
+.scoreboardElement {
+    margin: 5px;
+    left: 50%;
+}
+
+.snakeCanvas {
+    background: black;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.pongCanvas {
+    background: black;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+/* The Close Button */
+.closeMg {
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    position: relative;
+    top: -5px;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+.material-icons.stopButton {
+    padding: 4px;
+    border-radius: 50px;
+    padding: 4px;
+    border-radius: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+.material-icons.stopButton:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.closeMg:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+}

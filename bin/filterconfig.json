@@ -1,0 +1,11 @@
+{
+    "redaction": {
+        "active": true
+    },
+    "rotation": {
+        "active": true
+    },
+    "inactivetest": {
+        "active": false
+    }
+}

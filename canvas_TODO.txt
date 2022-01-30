@@ -1,0 +1,5 @@
+-> Client location gets reset on other client joining.
+-> setOtherUsers() gets called too often OR needs to be streamlined to not redraw the entire canvas.
+
+-> A user's position is held in too many different spots (client.locationInVirtualWorld, client.locationsOfClients, world.userPos, world.otherUsers).
+    Maybe remove this entirely from client, and keep it out of the otherUsers map?

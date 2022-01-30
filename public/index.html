@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>P&Okemon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class='background'>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button id="logintabbutton" class="tablinks">Login</button>
+        <button id="registertabbutton" class="tablinks">Register</button>
+        <button id="guesttabbutton" class="tablinks">Guest</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="logintab" class="tabcontent">
+        <img src="images/logo.png" class="loginLogo">
+        <div class="centralLoginDiv">
+            <h3 style='color: white'>Give your username and password!</h3>
+            <input type="text" placeholder="Pikachu" id="nicklogin" class="NickBox"><br />
+            <br>
+            <input type="password" placeholder="Password" id="loginPasswordButton" class="PasswordBox"><br />
+            <br>
+            <button type="submit" id="loginButtons" class="loginButton">Login</button>
+        </div>
+    </div>
+
+    <div id="registertab" class="tabcontent">
+        <div class="centralLoginDiv">
+            <h3 style='color: white'>Give your username and password for a new account!</h3>
+            <input type="text" placeholder="Pikachu" id="nickregister" class="NickBox"><br />
+            <br>
+            <input type="password" placeholder="Password" id="registerPasswordButton" class="PasswordBox"><br />
+            <br>
+            <button type="submit" id="registerButtons" class="loginButton">Register</button>
+        </div>
+    </div>
+
+    <div id="guesttab" class="tabcontent">
+        <div class="centralLoginDiv">
+            <h3 style='color: white'>Pick a username!</h3>
+            <input type="text" placeholder="Pikachu" id="nickguest" class="NickBox"><br />
+            <br>
+            <button type="submit" id="guestButtons" class="loginButton">Login</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

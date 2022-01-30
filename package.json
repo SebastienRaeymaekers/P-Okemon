@@ -1,0 +1,83 @@
+{
+  "name": "chat",
+  "version": "0.1.0",
+  "description": "Our chat application",
+  "main": "dist/index.js",
+  "private": true,
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "build-browser": "tsc --build tsconfig.browser.json && webpack",
+    "dev:server_windows": "ts-node src/index.ts --server ",
+    "dev:client_windows": "ts-node src/index.ts --client --nick=me",
+    "dev:server": "DEBUG=chat:* ts-node src/index.ts --server",
+    "start": "npm run build && npm run build-browser && DEBUG=chat:* ts-node src/index.ts --server",
+    "dev:client": "ts-node src/index.ts --client --nick=me",
+    "generate_keys": "npx tsc && node dist/crypto/generateKeys.js && cd bin && bash generate.sh ",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/p-en-o-cw/chat.git"
+  },
+  "keywords": [
+    "Console",
+    "chat",
+    "application"
+  ],
+  "author": "P&O CW 2020-2021",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/p-en-o-cw/chat",
+  "dependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/fast-levenshtein": "0.0.1",
+    "@types/node": "^14.14.10",
+    "@types/yargs": "^15.0.11",
+    "assert": "^2.0.0",
+    "browserify-fs": "^1.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "fast-levenshtein": "^3.0.0",
+    "fs": "0.0.1-security",
+    "key-fingerprint": "^1.1.0",
+    "most-common-words-by-language": "^2.17.8",
+    "node-aplay": "^1.0.3",
+    "node-wav-player": "^0.2.0",
+    "path-browserify": "^1.0.1",
+    "pathfinding": "^0.4.18",
+    "prefix-trie-ts": "0.0.4",
+    "process": "^0.11.10",
+    "request": "^2.88.2",
+    "socket.io": "^3.1.2",
+    "socket.io-client": "^3.1.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.1.1",
+    "three": "^0.126.0",
+    "url": "^0.11.0",
+    "util": "^0.12.3",
+    "webpack-fingerprint": "^0.2.0",
+    "yargs": "^16.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/three": "^0.125.3",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "delete": "^1.1.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.28",
+    "typescript": "^4.1.2",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
+  }
+}

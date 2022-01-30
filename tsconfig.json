@@ -1,0 +1,13 @@
+{
+	"compilerOptions": { 
+		"strict": true,
+		"module": "CommonJS", 
+		"target": "ESNext", 
+        // "lib": ["ESNext"], 
+		"lib": ["dom"],
+        "rootDir": "src",
+		"outDir": "dist", 
+		"resolveJsonModule": true,
+	},
+	"include": ["src"] 
+}

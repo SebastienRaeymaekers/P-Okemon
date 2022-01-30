@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "module": "ES2020",
+        "target": "ES2020",
+        "lib": ["ES2020"],
+        "outDir": "dist_browser",
+        "strict": true,
+		"resolveJsonModule": true,
+    },
+    "include": ["src/app/browser_main.ts"]
+}
