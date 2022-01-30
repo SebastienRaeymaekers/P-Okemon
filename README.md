@@ -1,6 +1,6 @@
 ## P&O project 2021
 
-IN cooperation with Miguel Quirijnen, Arne Vermeulen, Ewald Verfaillie, Nick Van Dun, William Vanden Daele, Elien Vandermaesen.
+In cooperation with Miguel Quirijnen, Arne Vermeulen, Ewald Verfaillie, Nick Van Dun, William Vanden Daele, Elien Vandermaesen.
 
 
 ## CHAT FUNCTIONALITIES
