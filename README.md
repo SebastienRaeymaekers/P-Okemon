@@ -6,7 +6,7 @@
 
   <p align="center">
     <img src="images/p&okemon.png" width="350" title="hover text">
-  
+    <br />
     A web application where you can login to a virtual world with your character and explore the different rooms and sub-worlds. Has a chat system which lets you send private messages to a certain user, to a group of users of which the characters sit around the same table or send public messages to everyone in the (sub-)world or room you are in.
     <br />
     <br />
