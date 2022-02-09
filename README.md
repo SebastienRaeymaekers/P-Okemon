@@ -19,7 +19,7 @@
 
 ## CHAT FUNCTIONALITIES
 
-## new app
+## New app
 
 
 Start the server by running `npm run dev:server` or clicking the Play icon in the NPM Scripts view in the VSCode Explorer sidebar.
